@@ -1,7 +1,16 @@
 import React from "react";
+import Header from "./components/header/Header";
+import Sidebar from "./components/sidebar/Sidebar";
 
 const App = () => {
-  return <div>youtube clone</div>;
+  return (
+    <div>
+      <Header />
+      <div>
+        <Sidebar />
+      </div>
+    </div>
+  );
 };
 
 export default App;
