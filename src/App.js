@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Login from "./components/login/Login";
 import HomeScreen from "./components/screens/HomeScreen";
+import { AuthContextProvider } from "./context/AuthContext";
+import { UserAuth } from "./context/AuthContext";
+import Protected from "./components/login/Protected";
 
 const HomePage = () => {
   return (
@@ -16,15 +19,22 @@ const HomePage = () => {
     </>
   );
 };
+
 const App = () => {
   return (
-    <>
+    <AuthContextProvider>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={
+            <Protected>
+              <HomePage />
+            </Protected>
+          }
+        />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/" element={<Login />} /> */}
       </Routes>
-    </>
+    </AuthContextProvider>
   );
 };
 
