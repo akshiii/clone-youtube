@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import GoogleButton from "react-google-button";
-import "./_login.scss";
+import "./login.css";
 import { UserAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
 
@@ -20,7 +20,7 @@ const Login = () => {
     if (user !== null) {
       navigate("/");
     }
-  }, [user]);
+  }, [user, navigate]);
 
   return (
     <div className="loginPage">

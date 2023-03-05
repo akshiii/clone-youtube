@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./_header.scss";
+import "./header.css";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import MenuIcon from "@mui/icons-material/Menu";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
@@ -27,7 +27,7 @@ const Header = () => {
     } else {
       navigate("/login");
     }
-  }, [user]);
+  }, [user, navigate]);
 
   return (
     <div className="header">

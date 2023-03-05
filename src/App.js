@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Header from "./components/header/Header";
 import Sidebar from "./components/sidebar/Sidebar";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Login from "./components/login/Login";
 import HomeScreen from "./components/screens/HomeScreen";
 import { AuthContextProvider } from "./context/AuthContext";
-import { UserAuth } from "./context/AuthContext";
 import Protected from "./components/login/Protected";
 
 const HomePage = () => {

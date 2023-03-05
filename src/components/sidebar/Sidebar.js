@@ -1,6 +1,6 @@
 import React from "react";
 import SidebarCategory from "./SidebarCategory";
-import "./_sidebar.scss";
+import "./sidebar.css";
 
 const Sidebar = () => {
   return (
